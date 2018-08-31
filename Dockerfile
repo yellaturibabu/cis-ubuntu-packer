@@ -13,7 +13,7 @@ RUN git clone https://github.com/gordon-scalesec/cis-ubuntu-packer.git
 
 COPY ./account.json /root/.gcloud/account.json
 COPY ./ /app
-COPY --from=0 /bin/packer /bin
+COPY --from=0 /bin/ /bin/
 RUN ["/bin/packer", "build", "./packer.json"]
 
 
